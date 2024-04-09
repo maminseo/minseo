@@ -1,4 +1,3 @@
-// 2024.04.09 c ++ 수업 
 #include <iostream> 
 using namespace std; 
 

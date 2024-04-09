@@ -1,4 +1,3 @@
-// 2024.04.09 c ++ 수업 
 #include <iostream> 
 using namespace std; 
 
@@ -28,9 +27,9 @@ class Person {
     
 }
 	~Person() {
-		cout << name << "님의 기록이 삭제되었습니다" << endl;
+		cout << name <<"님의 기록이 소멸되었습니다" << endl;
 	}
-};
+}
 
 int main() {
 	Person ps;
