@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 
+/* 
 void prt() {
     int i,j;
     for(i=0;i<MAX;i++) {
@@ -64,4 +65,4 @@ int main() {
 
     return 0;
 
-}
+} */

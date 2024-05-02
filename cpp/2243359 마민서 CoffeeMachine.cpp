@@ -11,8 +11,6 @@ class CoffeeMachine {
         this->sugar=sugar;
     }
     void drinkEspresso() {
-
-        
         if (coffee < 4 || water < 6) {
             cout << "에스프레소를 만들 재료가 부족합니다" << endl;
             Refill();
