@@ -1,6 +1,19 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 
+void prt() {
+    int i,j;
+    for(i=0;i<MAX;i++) {
+        for (j=0;j<MAX;j++) {
+            printf("%d ", chess[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\d_-------------\n",cnt);
+}
+
+void prt1() {}
+
 int promise(int row, int col) {
     int i;
     if(row>=MAX || col>=MAX) {
@@ -18,6 +31,7 @@ int promise(int row, int col) {
     }
     return 1;
 }
+int promise1(int row, int col) {}
 void queen(int row){
     int i;
     if (row == MAX) {
@@ -33,4 +47,21 @@ void queen(int row){
             }
         }
     }      
+}
+
+void queen2(int row) {
+   
+
+
+
+int main() {
+
+    queen(0);
+
+    //queen2(0);
+
+    //prt1();
+
+    return 0;
+
 }
