@@ -11,13 +11,14 @@ public:
         index++;
     }
     static void print() {
+        cout << "*********** 게시판입니다. *************" << endl;
         for(int i=0;i<=index;i++) {
             cout << notices[i] << endl;
         }
     }
 };
 
-string * Board::notices = new string[100];
+string *Board::notices = new string[100];
 int Board::index=0;
 
 
