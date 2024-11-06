@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+
+        body { font-family:'Iropke Batang' , serif; 
+            background-color:rgb(241, 231, 217); color:rgb(102, 97, 88)}
+        button {  font-family:'Iropke Batang' , serif; color:white; background-color:rgb(102, 97, 88); border:none; border-radius:7px; padding:5px 10px; cursor:pointer; }
+        button:hover { background-color:rgb(63, 59, 52); }
+    </style>
+    <title>질문1</title>
+</head>
+<body>
+    <h1>좋아하는 음악 장르</h1>
+    <form action="/answer2" method="post">
+        <input type="radio" name="genre" value="ballad"> 발라드 <br>
+        <input type="radio" name="genre" value="dance"> 댄스 <br>
+        <input type="radio" name="genre" value="hiphop"> 힙합 <br>
+        <input type="radio" name="genre" value="rnb"> R&B <br>
+        <input type="radio" name="genre" value="jazz"> 재즈 <br>
+        <input type="radio" name="genre" value="classic"> 클래식 <p>
+        <button type="submit">선택</button>
+    </form>
+    
+</body>
+</html>

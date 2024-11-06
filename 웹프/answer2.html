@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+        body { font-family:'Iropke Batang' , serif; 
+            background-color:rgb(241, 231, 217); color:rgb(102, 97, 88)}
+        button {  font-family:'Iropke Batang' , serif; color:white; background-color:rgb(102, 97, 88); border:none; border-radius:7px; padding:5px 10px; cursor:pointer; }
+        button:hover { background-color:rgb(63, 59, 52); }
+        select { font-family:'Iropke Batang' , serif; width: 50%; padding: 5px; border: 1px solid #ccc;border-radius: 5px;}
+    </style>
+    <title>질문2</title>
+</head>
+<body>
+    <h1>현재 이용중인 음악 감상 플랫폼</h1>
+    <form action="/thanks" method="post">
+        <select name ="app">
+            <option value="melon">멜론</option>
+            <option value="genie">지니</option>
+            <option value="bugs">유튜브 뮤직</option>
+            <option value="vibe">스푸티파이</option>
+            <option value="flo">애플 뮤직</option>
+        </select>
+        <button type="submit">선택</button>
+    </form>
+    
+</body>
+</html>
