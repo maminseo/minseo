@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>다이어리작성</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+        body{background:#FAECC5; font-family:'Iropke Batang' , serif;}
+    </style>
+</head>
+<body>
+    <h2>자유롭게 작성하기</h2>
+    <form method="get" action="/diary/insert">
+        제목: <input type="text" name="je"> <p>
+        내용:<br>
+        <textarea name="nae" rows="4" cols="50"></textarea> <p>
+    <button type ="submit">저장</button>
+    </form>
+</body>
+</html>
