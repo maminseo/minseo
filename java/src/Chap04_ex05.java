@@ -17,7 +17,6 @@ public class Chap04_ex05 {
 
         // System.out.println(a);
         // System.out.println(b);
-q
         // a = -77;
         // b = -55;
         a = MyMath.myabs(a);

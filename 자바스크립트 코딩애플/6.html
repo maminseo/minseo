@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코딩애플 자바스크립트 6 jquery</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h4 id="test">안녕하세요</h4>
+
+
+    <!-- jquery CDN 구글검색해서 가져오기 
+    uncompressed(풀파일),minified(압축파일),slim(압축파일,ajax,deferred 제외) minified로 가져옴 
+    왠만하면 제이쿼리 파일은 바디제일 마지막에 적기-->
+    <script 
+    src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous"></script>  
+    
+    <script>
+        //제이쿼리로 코딩할때는 $로 시작함
+        //제이쿼리로 코딩할때는 document.getElementById('test') => $('#test') 이렇게 코딩함
+        //document.querySelectorAll('#test')[0]
+        $('#test').html('안녕'); //innerHTML과 같음 test안에 모든 html
+        $('#test').text('안녕'); //innerText와 같음 test안에 모든 text
+        $('#test').html(); // 소괄호 안에 아무것도 안넣으면 jquey로 html 출력
+        $('#test').css('color','red');
+        // $('#test').attr('src','test.jpg'); jQuery html 다른거 변경할때 사용
+        $('#test').attr('class','yellow-bg');
+
+    </script>
+
+</body>
+</html>

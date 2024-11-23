@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코딩애플 자바스크립트 강의 2-4</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p>Alert 박스</p>
+        <button onclick="알림창열기('none')">닫기</button>
+    </div>
+
+    <div class="alert-box" id="idAlert">
+        <p>아이디를 입력안하셨어요</p>
+
+    </div>
+    <button onclick="알림창열기('block')">버튼</button>
+    <button onclick="">아이디 버튼</button>
+    <button onclick="">비번 버튼</button>
+    <script>
+        function 알림창열기(구멍1,구멍2) {
+            document.getElementById('구멍1').style.display = 구멍2;
+        }
+
+        function plus() {
+            2+1;
+        }
+
+
+    </script>
+</body>
+</html>

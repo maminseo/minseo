@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코딩애플 자바스크립트 강의 5 EventListener</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p id="title">Alert 박스</p>
+        <button id="close">닫기</button>
+    </div>
+
+
+    <button onclick="알림창열기('아이디를 입력해라')">아이디 버튼</button>
+    <button onclick="알림창열기('비번을 입력해라')">비번 버튼</button>
+
+
+    <script>
+       document.getElementById('close').addEventListener('click',function() { //여기서 'click'은 이벤트이다. mouseover,scroll등있음.
+        document.getElementById('alert').style.display = 'none';
+       }); // EVENTLISTENER
+
+
+
+       function 알림창열기(구멍) {
+        document.getElementById('title').innerHTML = 구멍;
+        document.getElementById('alert').style.display = 'block';
+    }
+
+
+
+    </script>
+</body>
+</html>
