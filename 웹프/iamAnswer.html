@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개 결과</title>
+  <style>
+    body {background-color: aquamarine;}
+    span {color: blue;}
+  </style>
+</head>
+<body>
+  저는 <span th:text="${age}">22</span>세 <span th:text="${gender}">여</span>학생입니다.
+  <p>
+    좋아하는 음식은 다음과 같습니다.
+    <table border="1"></table>
+    <span th:text="${food}"></span>
+  </p>
+  <p>
+    저의 자신감 수치(1~5)는 다음과 같습니다.
+    외모 자신감:<span th:text="${q1}"></span>
+    학점 자신감:<span th:text="${q2}"></span>
+    수업 자신감:<span th:text="${q3}"></span>
+  </p>
+  근면 성실 매우겸손 게다가 엄청 열공합니다
+</body>
+</html>
