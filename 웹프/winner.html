@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>월드컵1</title>
+  <style>
+    @import url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+    body {
+      font-size: large;
+      font-family: 'Iropke Batang' , serif; 
+      background-color: rgb(246, 239, 239);
+      text-align: center;
+    }
+    h {
+      color: #cf1111bd;
+      text-align: center;
+      margin-top: 50px;
+      letter-spacing: 1.3px;
+    }
+    div {
+      background-color: rgba(235, 70, 36, 0.408);
+      padding: 20px;
+      margin: 30px;
+      border-radius: 20px;
+    }
+    button {
+      font-family: 'Iropke Batang' , serif; 
+      color: white; 
+      background-color: rgba(187, 75, 75, 0.53); 
+      border: none; 
+      border-radius: 7px; 
+      padding: 5px 10px; 
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgba(187, 75, 75, 0.8);
+    }
+    img {
+      width: 300px;
+      height: 300px;
+      text-align: center;
+    }
+    label {
+      font-size: 20px;
+      color:#2d0d0dbd
+    }
+    table {
+      border-collapse: collapse;
+      margin: auto;
+    }
+    span {
+      font-size: 20px;
+      color: #2d0d0dbd;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h2>귀여운 동물 월드컵 우승자!</h2>
+    승자는 <span th:text="${win}"></span> 입니다
+  </div>
+  <div>
+    <img th:src="|${win}.jpg|">
+    <a href="월드컵1.html"><button>결과보기</button></a>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>결과 보기</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    @import url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+    body {
+      font-family: 'Iropke Batang' , serif; 
+      background-color: rgb(246, 239, 239);
+      text-align: center;
+    }
+    h2 {
+      color: #be1d1dbd;
+      text-align: center;
+      margin-top: 50px;
+      letter-spacing: 1.3px;
+    }
+    div {
+      background-color: rgba(244, 206, 206, 0.408);
+      padding: 20px;
+      margin: 30px;
+      border-radius: 20px;
+    }
+    button {
+      font-family: 'Iropke Batang' , serif; 
+      color: white; 
+      background-color: rgba(187, 75, 75, 0.53); 
+      border: none; 
+      border-radius: 7px; 
+      padding: 5px 10px; 
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgba(187, 75, 75, 0.8);
+    }
+    img {
+      width: 300px;
+      height: 300px;
+      text-align: center;
+    }
+    label {
+      font-size: 20px;
+      color:#2d0d0dbd
+    }
+    table {
+      border-collapse: collapse;
+      width: 70%;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+	<div>
+	<h2>귀여운 동물 월드컵 우승 결과</h2>
+	<br>
+    <table border = "1">
+		<tr>
+			<th>이름</th> <th>우승 횟수</th>
+        <tr th:each="a:${arr}">
+        	<td th:text="${a.name}"></td>
+            <td th:text="${a.fcount}"></td>
+    </table>
+    <br>
+    <a href="/worldcup1"><button>4강전 다시하기</button></a>
+	</div>
+
+</body>
+</html>
