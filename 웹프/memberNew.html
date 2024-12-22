@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입</title>
+		<style> 
+        @import url('https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+
+        body { font-family:'Iropke Batang' , serif; }
+        fieldset{ width:400px; background:rgb(255, 197, 90); border:white; }  
+				legend {  background:#f69733; color:lightyellow; font-size:20px;}
+				input { font-family:'Iropke Batang' , serif; width: 300px; padding:10px; margin-bottom:10px; font-size:16px;}
+				button {font-family:'Iropke Batang' , serif; background:rgb(158, 205, 223); color:rgb(110, 35, 35); border:2px solid rgb(235, 124, 124); font-size:20px; padding:5px 30px;}
+		</style>
+	</head>
+	<body>
+		<div align="center">
+			<form method="get" action="/member/insert"><p>
+				<fieldset> 
+					<legend>[ 회원정보를 입력하세요]</legend><br>     
+					<input type="text" name="mid" placeholder="아이디를 입력하세요" required> <br>
+					<input type="text" name="pw" placeholder="패스워드를 입력하세요" required> <br>
+					<input type="text" name="name" placeholder="이름을 입력하세요" required> <br>
+					<input type="text" name="phone" placeholder="폰번호를 입력하세요" required> <br>
+					<input type="text" placeholder="신규회원 보너스 1000 마일리지적립" disabled > <br><br>  
+				</fieldset> <br> 
+				<button>등록</button>  
+			</form></div>
+	</body>
+</html>
