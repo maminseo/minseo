@@ -1,45 +1,75 @@
-// 2024.04.09 c ++ 수업 
-#include <iostream> 
-using namespace std; 
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+#include <map>
+#include <iomanip>
 
-class Person {
-	private:
-	string name;
-	int age;
+using namespace std;
 
-	public:
-	Person() {
-		name = "bear";
-		age = 20;
-	}
-	Person(string name) {
-		this->name = name;
-		age = 24;
-	}
-	Person(string name, int age) {
-		this->name = name;
-        this->age = age; 
-}		
-    string getName() {
-        return name;
-    }
-	int getAge() {
-		return age;
-    
-}
-	~Person() {
-		cout << name << "님의 기록이 삭제되었습니다" << endl;
-	}
+struct Student {
+    string id;
+    string firstName;
+    string lastName;
 };
 
+bool compareStudents(const Student &a, const Student &b) {
+    return a.id < b.id;
+}
+
 int main() {
-	Person ps;
-	Person pa("cat",22);
-	Person pt("dog");
-	cout << "이름: " << ps.getName() << ", 나이: " << ps.getAge() << endl;
-	cout << "이름: " << pa.getName() << ", 나이: " << pa.getAge() << endl;
-    cout << "이름: " << pt.getName() << ", 나이: " << pt.getAge() << endl;
+    ifstream inputFile("1.inp");
+    ofstream outputFile("1.out");
+
+    if (!inputFile || !outputFile) {
+        cerr << "파일을 열 수 없습니다" << endl;
+        return 1;
+    }
+
+    int total;
+    inputFile >> total;
+    inputFile.ignore();
+    vector<Student> students;
+
+    for (int i = 0; i < total; i++) {
+        Student temp;
+        inputFile >> temp.id >> temp.firstName >> temp.lastName;
+        students.push_back(temp);
+    }
+
+
+    sort(students.begin(), students.end(), compareStudents);
+
+  
+    int maxFirstLength = 0;
+    for (const auto &s : students) {
+        maxFirstLength = max(maxFirstLength, (int)s.firstName.length());
+    }
+
+    for (const auto &s : students) {
+        outputFile << s.id << " "
+                   << setw(maxFirstLength) << left << s.firstName << " "  
+                   << s.lastName << endl;
+    }
+
+    outputFile << endl; 
+
+    map<string, int> lastNameCount;
+    for (const auto &s : students) {
+        lastNameCount[s.lastName]++;
+    }
+
+
+    for (const auto &entry : lastNameCount) {
+        if (entry.second >= 2) { 
+            outputFile << entry.first << " " << entry.second << endl;
+        }
+    }
+
+
+    inputFile.close();
+    outputFile.close();
+
 
     return 0;
-
 }
